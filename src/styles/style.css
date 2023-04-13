@@ -1,0 +1,34 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url(../fonts/Roboto-Regular.ttf);
+}
+
+* {
+    border: 1px solid red;
+    font-family: 'Roboto';
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    height: 1000px;
+}
+
+header {
+    flex: 2;
+    display: inline-flex;
+    flex-direction: row;
+}
+
+#content-section {
+    flex: 7;
+}
+
+footer h3 {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: lighter;
+}
