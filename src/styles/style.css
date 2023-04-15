@@ -4,10 +4,14 @@
 }
 
 * {
-    border: 1px solid red;
+    //border: 1px solid red;
     font-family: 'Roboto';
     margin: 0;
     padding: 0;
+}
+
+a {
+    text-decoration: none;
 }
 
 #container {
@@ -54,17 +58,55 @@ header img {
     list-style-type: none; 
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 12px;
     font-size: 1.3rem;
+}
+
+li#inbox,
+li#today,
+li#this-week,
+#add-project,
+.project {
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 30px;
+    min-height: 10px;
+}
+
+li#inbox:hover,
+li#today:hover,
+li#this-week:hover,
+#add-project:hover,
+.project {
+    cursor: pointer
+}
+
+li#inbox {
+    background-image: url('../images/inbox.svg');
+}
+
+li#today {
+    background-image: url('../images/calendar-today.svg');
+}
+
+li#this-week {
+    background-image: url('../images/calendar-month.svg');
 }
 
 #left-content h3 {
+    margin-top: 12px;
     font-size: 1.8rem;
 }
 
-#left-content p {
-    font-size: 1.3rem;
+.project {
+    background-image: url('../images/format-list-bulleted.svg')
 }
+
+#add-project {
+    font-size: 1.3rem;
+    background-image: url('../images/plus.svg');
+}
+
 
 #right-content {
     display: flex;
@@ -78,4 +120,14 @@ footer {
     align-items: center;
     justify-content: center;
     font-size: 1rem;
+}
+
+footer p {
+    background-image: url('../images/github.svg');
+    background-repeat: no-repeat;
+    background-position: right center;
+    padding-right: 25px;
+    min-height: 10px;
+    color: black;
+    filter: invert(100%);
 }
