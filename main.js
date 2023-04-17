@@ -1,98 +1,98 @@
 (() => {
   "use strict";
   var n = {
-      890: (n, r, e) => {
-        e.d(r, { Z: () => j });
-        var t = e(81),
-          o = e.n(t),
-          i = e(645),
-          a = e.n(i),
-          c = e(667),
-          s = e.n(c),
-          l = new URL(e(937), e.b),
-          p = new URL(e(556), e.b),
-          d = new URL(e(195), e.b),
-          u = new URL(e(413), e.b),
-          f = new URL(e(324), e.b),
-          g = new URL(e(152), e.b),
-          h = new URL(e(926), e.b),
-          m = a()(o()),
+      890: (n, e, t) => {
+        t.d(e, { Z: () => j });
+        var r = t(81),
+          o = t.n(r),
+          a = t(645),
+          i = t.n(a),
+          c = t(667),
+          s = t.n(c),
+          l = new URL(t(937), t.b),
+          p = new URL(t(556), t.b),
+          d = new URL(t(195), t.b),
+          u = new URL(t(413), t.b),
+          f = new URL(t(324), t.b),
+          g = new URL(t(152), t.b),
+          m = new URL(t(926), t.b),
+          h = i()(o()),
           v = s()(l),
           x = s()(p),
           b = s()(d),
           y = s()(u),
-          w = s()(f),
-          k = s()(g),
-          T = s()(h);
-        m.push([
+          S = s()(f),
+          w = s()(g),
+          k = s()(m);
+        h.push([
           n.id,
-          "@font-face {\r\n    font-family: 'Roboto';\r\n    src: url(" +
+          '@font-face {\n  font-family: "Roboto";\n  src: url(' +
             v +
-            ");\r\n}\r\n\r\n* {\r\n    border: 1px solid red;\r\n    font-family: 'Roboto';\r\n    margin: 0;\r\n    padding: 0;\r\n}\r\n\r\na {\r\n    text-decoration: none;\r\n}\r\n\r\n#container {\r\n    display: flex;\r\n    flex-direction: column;\r\n    height: 100vh;\r\n}\r\n\r\nheader, \r\nfooter {\r\n    background-color:  #1aa3ff;\r\n    color: white;\r\n}\r\n\r\nheader {\r\n    flex: 2;\r\n    display: inline-flex;\r\n    align-items: center;\r\n    padding-left: 10px;\r\n    gap: 5px;\r\n}\r\n\r\nheader img {\r\n    height: 50px;\r\n    width: 50px;\r\n    filter: invert(100%);\r\n    margin-left: 20px;\r\n}\r\n\r\n#content-section {\r\n    flex: 18;\r\n    display: flex;\r\n}\r\n\r\n#left-content {\r\n    background-color: #ccebff;\r\n    padding: 30px;\r\n    gap: 14px;\r\n    display: flex;\r\n    flex-direction: column;\r\n    flex: 1.8;\r\n}\r\n\r\n#left-content ul {\r\n    list-style-type: none; \r\n    display: flex;\r\n    flex-direction: column;\r\n    gap: 12px;\r\n    font-size: 1.3rem;\r\n}\r\n\r\nli#inbox,\r\nli#today,\r\nli#this-week,\r\n#add-project,\r\n.project {\r\n    background-repeat: no-repeat;\r\n    background-position: left center;\r\n    padding-left: 30px;\r\n    min-height: 10px;\r\n}\r\n\r\nli#inbox:hover,\r\nli#today:hover,\r\nli#this-week:hover,\r\n#add-project:hover,\r\n.project {\r\n    cursor: pointer\r\n}\r\n\r\nli#inbox {\r\n    background-image: url(" +
+            ');\n}\n\n* {\n  border: 1px solid red;\n  font-family: "Roboto";\n  margin: 0;\n  padding: 0;\n}\n\na {\n  text-decoration: none;\n}\n\n#container {\n  display: flex;\n  flex-direction: column;\n  height: 100vh;\n}\n\nheader,\nfooter {\n  background-color: #1aa3ff;\n  color: white;\n}\n\nheader {\n  flex: 2;\n  display: inline-flex;\n  align-items: center;\n  padding-left: 10px;\n  gap: 5px;\n}\n\nheader img {\n  height: 50px;\n  width: 50px;\n  filter: invert(100%);\n  margin-left: 20px;\n}\n\n#content-section {\n  flex: 18;\n  display: flex;\n}\n\n#left-content {\n  background-color: #ccebff;\n  padding: 30px;\n  gap: 14px;\n  display: flex;\n  flex-direction: column;\n  flex: 1.8;\n}\n\n#left-content ul {\n  list-style-type: none;\n  display: flex;\n  flex-direction: column;\n  gap: 12px;\n  font-size: 1.3rem;\n}\n\nli#inbox,\nli#today,\nli#this-week,\n#add-project,\n.project {\n  background-repeat: no-repeat;\n  background-position: left center;\n  padding-left: 30px;\n  min-height: 10px;\n}\n\nli#inbox:hover,\nli#today:hover,\nli#this-week:hover,\n#add-project:hover,\n.project {\n  cursor: pointer;\n}\n\nli#inbox {\n  background-image: url(' +
             x +
-            ");\r\n}\r\n\r\nli#today {\r\n    background-image: url(" +
+            ");\n}\n\nli#today {\n  background-image: url(" +
             b +
-            ");\r\n}\r\n\r\nli#this-week {\r\n    background-image: url(" +
+            ");\n}\n\nli#this-week {\n  background-image: url(" +
             y +
-            ");\r\n}\r\n\r\n#left-content h3 {\r\n    margin-top: 12px;\r\n    font-size: 1.8rem;\r\n}\r\n\r\n.project {\r\n    background-image: url(" +
+            ");\n}\n\n#left-content h3 {\n  margin-top: 12px;\n  font-size: 1.8rem;\n}\n\n.project {\n  background-image: url(" +
+            S +
+            ");\n}\n\n#add-project {\n  font-size: 1.3rem;\n  background-image: url(" +
             w +
-            ")\r\n}\r\n\r\n#add-project {\r\n    font-size: 1.3rem;\r\n    background-image: url(" +
+            ");\n}\n\n#right-content {\n  flex: 7;\n  background-color: #def2ff;\n}\n\n#right-content #right-container {\n  display: flex;\n  flex-direction: column;\n  padding-left: 120px;\n  padding-top: 30px;\n  gap: 10px;\n}\n\n.task-div {\n  display: flex;\n  gap: 10px;\n  \n}\n\n#right-content h3 {\n  font-size: 2rem;\n  display: inline;\n  margin-bottom: 20px;\n}\n\n#right-content p {\n  font-size: 1rem;\n}\n\nfooter {\n  display: flex;\n  flex: 1;\n  align-items: center;\n  justify-content: center;\n  font-size: 1rem;\n}\n\nfooter p {\n  background-image: url(" +
             k +
-            ");\r\n}\r\n\r\n\r\n#right-content {\r\n    flex: 7;\r\n    background-color: #def2ff;\r\n    \r\n}\r\n\r\n#right-content div {\r\n    display: flex;\r\n    flex-direction: column;\r\n    padding-left: 120px;\r\n    padding-top: 30px;\r\n    gap: 30px;\r\n}\r\n\r\n#right-content h3 {\r\n    font-size: 2rem;\r\n    display: inline;\r\n}\r\n\r\n#right-content p {\r\n    font-size: 1.2rem;\r\n}\r\n\r\nfooter {\r\n    display: flex;\r\n    flex: 1;\r\n    align-items: center;\r\n    justify-content: center;\r\n    font-size: 1rem;\r\n}\r\n\r\nfooter p {\r\n    background-image: url(" +
-            T +
-            ");\r\n    background-repeat: no-repeat;\r\n    background-position: right center;\r\n    padding-right: 25px;\r\n    min-height: 10px;\r\n    color: black;\r\n    filter: invert(100%);\r\n}",
+            ");\n  background-repeat: no-repeat;\n  background-position: right center;\n  padding-right: 25px;\n  min-height: 10px;\n  color: black;\n  filter: invert(100%);\n}\n",
           "",
         ]);
-        const j = m;
+        const j = h;
       },
       645: (n) => {
         n.exports = function (n) {
-          var r = [];
+          var e = [];
           return (
-            (r.toString = function () {
-              return this.map(function (r) {
-                var e = "",
-                  t = void 0 !== r[5];
+            (e.toString = function () {
+              return this.map(function (e) {
+                var t = "",
+                  r = void 0 !== e[5];
                 return (
-                  r[4] && (e += "@supports (".concat(r[4], ") {")),
-                  r[2] && (e += "@media ".concat(r[2], " {")),
-                  t &&
-                    (e += "@layer".concat(
-                      r[5].length > 0 ? " ".concat(r[5]) : "",
+                  e[4] && (t += "@supports (".concat(e[4], ") {")),
+                  e[2] && (t += "@media ".concat(e[2], " {")),
+                  r &&
+                    (t += "@layer".concat(
+                      e[5].length > 0 ? " ".concat(e[5]) : "",
                       " {"
                     )),
-                  (e += n(r)),
-                  t && (e += "}"),
-                  r[2] && (e += "}"),
-                  r[4] && (e += "}"),
-                  e
+                  (t += n(e)),
+                  r && (t += "}"),
+                  e[2] && (t += "}"),
+                  e[4] && (t += "}"),
+                  t
                 );
               }).join("");
             }),
-            (r.i = function (n, e, t, o, i) {
+            (e.i = function (n, t, r, o, a) {
               "string" == typeof n && (n = [[null, n, void 0]]);
-              var a = {};
-              if (t)
+              var i = {};
+              if (r)
                 for (var c = 0; c < this.length; c++) {
                   var s = this[c][0];
-                  null != s && (a[s] = !0);
+                  null != s && (i[s] = !0);
                 }
               for (var l = 0; l < n.length; l++) {
                 var p = [].concat(n[l]);
-                (t && a[p[0]]) ||
-                  (void 0 !== i &&
+                (r && i[p[0]]) ||
+                  (void 0 !== a &&
                     (void 0 === p[5] ||
                       (p[1] = "@layer"
                         .concat(p[5].length > 0 ? " ".concat(p[5]) : "", " {")
                         .concat(p[1], "}")),
-                    (p[5] = i)),
-                  e &&
+                    (p[5] = a)),
+                  t &&
                     (p[2]
                       ? ((p[1] = "@media "
                           .concat(p[2], " {")
                           .concat(p[1], "}")),
-                        (p[2] = e))
-                      : (p[2] = e)),
+                        (p[2] = t))
+                      : (p[2] = t)),
                   o &&
                     (p[4]
                       ? ((p[1] = "@supports ("
@@ -100,22 +100,22 @@
                           .concat(p[1], "}")),
                         (p[4] = o))
                       : (p[4] = "".concat(o))),
-                  r.push(p));
+                  e.push(p));
               }
             }),
-            r
+            e
           );
         };
       },
       667: (n) => {
-        n.exports = function (n, r) {
+        n.exports = function (n, e) {
           return (
-            r || (r = {}),
+            e || (e = {}),
             n
               ? ((n = String(n.__esModule ? n.default : n)),
                 /^['"].*['"]$/.test(n) && (n = n.slice(1, -1)),
-                r.hash && (n += r.hash),
-                /["'() \t\n]|(%20)/.test(n) || r.needQuotes
+                e.hash && (n += e.hash),
+                /["'() \t\n]|(%20)/.test(n) || e.needQuotes
                   ? '"'.concat(
                       n.replace(/"/g, '\\"').replace(/\n/g, "\\n"),
                       '"'
@@ -131,23 +131,23 @@
         };
       },
       379: (n) => {
-        var r = [];
-        function e(n) {
-          for (var e = -1, t = 0; t < r.length; t++)
-            if (r[t].identifier === n) {
-              e = t;
+        var e = [];
+        function t(n) {
+          for (var t = -1, r = 0; r < e.length; r++)
+            if (e[r].identifier === n) {
+              t = r;
               break;
             }
-          return e;
+          return t;
         }
-        function t(n, t) {
-          for (var i = {}, a = [], c = 0; c < n.length; c++) {
+        function r(n, r) {
+          for (var a = {}, i = [], c = 0; c < n.length; c++) {
             var s = n[c],
-              l = t.base ? s[0] + t.base : s[0],
-              p = i[l] || 0,
+              l = r.base ? s[0] + r.base : s[0],
+              p = a[l] || 0,
               d = "".concat(l, " ").concat(p);
-            i[l] = p + 1;
-            var u = e(d),
+            a[l] = p + 1;
+            var u = t(d),
               f = {
                 css: s[1],
                 media: s[2],
@@ -155,180 +155,180 @@
                 supports: s[4],
                 layer: s[5],
               };
-            if (-1 !== u) r[u].references++, r[u].updater(f);
+            if (-1 !== u) e[u].references++, e[u].updater(f);
             else {
-              var g = o(f, t);
-              (t.byIndex = c),
-                r.splice(c, 0, { identifier: d, updater: g, references: 1 });
+              var g = o(f, r);
+              (r.byIndex = c),
+                e.splice(c, 0, { identifier: d, updater: g, references: 1 });
             }
-            a.push(d);
+            i.push(d);
           }
-          return a;
+          return i;
         }
-        function o(n, r) {
-          var e = r.domAPI(r);
+        function o(n, e) {
+          var t = e.domAPI(e);
           return (
-            e.update(n),
-            function (r) {
-              if (r) {
+            t.update(n),
+            function (e) {
+              if (e) {
                 if (
-                  r.css === n.css &&
-                  r.media === n.media &&
-                  r.sourceMap === n.sourceMap &&
-                  r.supports === n.supports &&
-                  r.layer === n.layer
+                  e.css === n.css &&
+                  e.media === n.media &&
+                  e.sourceMap === n.sourceMap &&
+                  e.supports === n.supports &&
+                  e.layer === n.layer
                 )
                   return;
-                e.update((n = r));
-              } else e.remove();
+                t.update((n = e));
+              } else t.remove();
             }
           );
         }
         n.exports = function (n, o) {
-          var i = t((n = n || []), (o = o || {}));
+          var a = r((n = n || []), (o = o || {}));
           return function (n) {
             n = n || [];
-            for (var a = 0; a < i.length; a++) {
-              var c = e(i[a]);
-              r[c].references--;
+            for (var i = 0; i < a.length; i++) {
+              var c = t(a[i]);
+              e[c].references--;
             }
-            for (var s = t(n, o), l = 0; l < i.length; l++) {
-              var p = e(i[l]);
-              0 === r[p].references && (r[p].updater(), r.splice(p, 1));
+            for (var s = r(n, o), l = 0; l < a.length; l++) {
+              var p = t(a[l]);
+              0 === e[p].references && (e[p].updater(), e.splice(p, 1));
             }
-            i = s;
+            a = s;
           };
         };
       },
       569: (n) => {
-        var r = {};
-        n.exports = function (n, e) {
-          var t = (function (n) {
-            if (void 0 === r[n]) {
-              var e = document.querySelector(n);
+        var e = {};
+        n.exports = function (n, t) {
+          var r = (function (n) {
+            if (void 0 === e[n]) {
+              var t = document.querySelector(n);
               if (
                 window.HTMLIFrameElement &&
-                e instanceof window.HTMLIFrameElement
+                t instanceof window.HTMLIFrameElement
               )
                 try {
-                  e = e.contentDocument.head;
+                  t = t.contentDocument.head;
                 } catch (n) {
-                  e = null;
+                  t = null;
                 }
-              r[n] = e;
+              e[n] = t;
             }
-            return r[n];
+            return e[n];
           })(n);
-          if (!t)
+          if (!r)
             throw new Error(
               "Couldn't find a style target. This probably means that the value for the 'insert' parameter is invalid."
             );
-          t.appendChild(e);
+          r.appendChild(t);
         };
       },
       216: (n) => {
         n.exports = function (n) {
-          var r = document.createElement("style");
-          return n.setAttributes(r, n.attributes), n.insert(r, n.options), r;
+          var e = document.createElement("style");
+          return n.setAttributes(e, n.attributes), n.insert(e, n.options), e;
         };
       },
-      565: (n, r, e) => {
+      565: (n, e, t) => {
         n.exports = function (n) {
-          var r = e.nc;
-          r && n.setAttribute("nonce", r);
+          var e = t.nc;
+          e && n.setAttribute("nonce", e);
         };
       },
       795: (n) => {
         n.exports = function (n) {
           if ("undefined" == typeof document)
             return { update: function () {}, remove: function () {} };
-          var r = n.insertStyleElement(n);
+          var e = n.insertStyleElement(n);
           return {
-            update: function (e) {
-              !(function (n, r, e) {
-                var t = "";
-                e.supports && (t += "@supports (".concat(e.supports, ") {")),
-                  e.media && (t += "@media ".concat(e.media, " {"));
-                var o = void 0 !== e.layer;
+            update: function (t) {
+              !(function (n, e, t) {
+                var r = "";
+                t.supports && (r += "@supports (".concat(t.supports, ") {")),
+                  t.media && (r += "@media ".concat(t.media, " {"));
+                var o = void 0 !== t.layer;
                 o &&
-                  (t += "@layer".concat(
-                    e.layer.length > 0 ? " ".concat(e.layer) : "",
+                  (r += "@layer".concat(
+                    t.layer.length > 0 ? " ".concat(t.layer) : "",
                     " {"
                   )),
-                  (t += e.css),
-                  o && (t += "}"),
-                  e.media && (t += "}"),
-                  e.supports && (t += "}");
-                var i = e.sourceMap;
-                i &&
+                  (r += t.css),
+                  o && (r += "}"),
+                  t.media && (r += "}"),
+                  t.supports && (r += "}");
+                var a = t.sourceMap;
+                a &&
                   "undefined" != typeof btoa &&
-                  (t +=
+                  (r +=
                     "\n/*# sourceMappingURL=data:application/json;base64,".concat(
-                      btoa(unescape(encodeURIComponent(JSON.stringify(i)))),
+                      btoa(unescape(encodeURIComponent(JSON.stringify(a)))),
                       " */"
                     )),
-                  r.styleTagTransform(t, n, r.options);
-              })(r, n, e);
+                  e.styleTagTransform(r, n, e.options);
+              })(e, n, t);
             },
             remove: function () {
               !(function (n) {
                 if (null === n.parentNode) return !1;
                 n.parentNode.removeChild(n);
-              })(r);
+              })(e);
             },
           };
         };
       },
       589: (n) => {
-        n.exports = function (n, r) {
-          if (r.styleSheet) r.styleSheet.cssText = n;
+        n.exports = function (n, e) {
+          if (e.styleSheet) e.styleSheet.cssText = n;
           else {
-            for (; r.firstChild; ) r.removeChild(r.firstChild);
-            r.appendChild(document.createTextNode(n));
+            for (; e.firstChild; ) e.removeChild(e.firstChild);
+            e.appendChild(document.createTextNode(n));
           }
         };
       },
-      937: (n, r, e) => {
-        n.exports = e.p + "fc2b5060f7accec5cf74.ttf";
+      937: (n, e, t) => {
+        n.exports = t.p + "fc2b5060f7accec5cf74.ttf";
       },
-      413: (n, r, e) => {
-        n.exports = e.p + "1514cb89e66edd886067.svg";
+      413: (n, e, t) => {
+        n.exports = t.p + "1514cb89e66edd886067.svg";
       },
-      195: (n, r, e) => {
-        n.exports = e.p + "233385e32206cd372d69.svg";
+      195: (n, e, t) => {
+        n.exports = t.p + "233385e32206cd372d69.svg";
       },
-      324: (n, r, e) => {
-        n.exports = e.p + "365f3e7f182c9f913994.svg";
+      324: (n, e, t) => {
+        n.exports = t.p + "365f3e7f182c9f913994.svg";
       },
-      926: (n, r, e) => {
-        n.exports = e.p + "550985caaa8859d4b95f.svg";
+      926: (n, e, t) => {
+        n.exports = t.p + "550985caaa8859d4b95f.svg";
       },
-      556: (n, r, e) => {
-        n.exports = e.p + "939f2a757e3335be71bb.svg";
+      556: (n, e, t) => {
+        n.exports = t.p + "939f2a757e3335be71bb.svg";
       },
-      152: (n, r, e) => {
-        n.exports = e.p + "3cffe9a515498593b872.svg";
+      152: (n, e, t) => {
+        n.exports = t.p + "3cffe9a515498593b872.svg";
       },
     },
-    r = {};
-  function e(t) {
-    var o = r[t];
+    e = {};
+  function t(r) {
+    var o = e[r];
     if (void 0 !== o) return o.exports;
-    var i = (r[t] = { id: t, exports: {} });
-    return n[t](i, i.exports, e), i.exports;
+    var a = (e[r] = { id: r, exports: {} });
+    return n[r](a, a.exports, t), a.exports;
   }
-  (e.m = n),
-    (e.n = (n) => {
-      var r = n && n.__esModule ? () => n.default : () => n;
-      return e.d(r, { a: r }), r;
+  (t.m = n),
+    (t.n = (n) => {
+      var e = n && n.__esModule ? () => n.default : () => n;
+      return t.d(e, { a: e }), e;
     }),
-    (e.d = (n, r) => {
-      for (var t in r)
-        e.o(r, t) &&
-          !e.o(n, t) &&
-          Object.defineProperty(n, t, { enumerable: !0, get: r[t] });
+    (t.d = (n, e) => {
+      for (var r in e)
+        t.o(e, r) &&
+          !t.o(n, r) &&
+          Object.defineProperty(n, r, { enumerable: !0, get: e[r] });
     }),
-    (e.g = (function () {
+    (t.g = (function () {
       if ("object" == typeof globalThis) return globalThis;
       try {
         return this || new Function("return this")();
@@ -336,14 +336,14 @@
         if ("object" == typeof window) return window;
       }
     })()),
-    (e.o = (n, r) => Object.prototype.hasOwnProperty.call(n, r)),
+    (t.o = (n, e) => Object.prototype.hasOwnProperty.call(n, e)),
     (() => {
       var n;
-      e.g.importScripts && (n = e.g.location + "");
-      var r = e.g.document;
-      if (!n && r && (r.currentScript && (n = r.currentScript.src), !n)) {
-        var t = r.getElementsByTagName("script");
-        t.length && (n = t[t.length - 1].src);
+      t.g.importScripts && (n = t.g.location + "");
+      var e = t.g.document;
+      if (!n && e && (e.currentScript && (n = e.currentScript.src), !n)) {
+        var r = e.getElementsByTagName("script");
+        r.length && (n = r[r.length - 1].src);
       }
       if (!n)
         throw new Error(
@@ -353,48 +353,77 @@
         .replace(/#.*$/, "")
         .replace(/\?.*$/, "")
         .replace(/\/[^\/]+$/, "/")),
-        (e.p = n);
+        (t.p = n);
     })(),
-    (e.b = document.baseURI || self.location.href),
-    (e.nc = void 0),
+    (t.b = document.baseURI || self.location.href),
+    (t.nc = void 0),
     (() => {
-      var n = e(379),
-        r = e.n(n),
-        t = e(795),
-        o = e.n(t),
-        i = e(569),
-        a = e.n(i),
-        c = e(565),
-        s = e.n(c),
-        l = e(216),
-        p = e.n(l),
-        d = e(589),
-        u = e.n(d),
-        f = e(890),
+      var n = t(379),
+        e = t.n(n),
+        r = t(795),
+        o = t.n(r),
+        a = t(569),
+        i = t.n(a),
+        c = t(565),
+        s = t.n(c),
+        l = t(216),
+        p = t.n(l),
+        d = t(589),
+        u = t.n(d),
+        f = t(890),
         g = {};
       (g.styleTagTransform = u()),
         (g.setAttributes = s()),
-        (g.insert = a().bind(null, "head")),
+        (g.insert = i().bind(null, "head")),
         (g.domAPI = o()),
         (g.insertStyleElement = p()),
-        r()(f.Z, g),
+        e()(f.Z, g),
         f.Z && f.Z.locals && f.Z.locals;
+      const m = (() => {
+        let n = [],
+          e = [];
+        null !== localStorage.getItem("projectStorage") &&
+          (n = JSON.parse(localStorage.getItem("projectStorage"))),
+          null !== localStorage.getItem("taskStorage") &&
+            (e = JSON.parse(localStorage.getItem("taskStorage")));
+        const t = {
+          title: "test title",
+          description: "test description",
+          dueDate: "test duedate",
+          priority: "test priority",
+          project: "default",
+        };
+        return (
+          e.push(t),
+          localStorage.setItem("taskStorage", JSON.stringify(e)),
+          console.log(e),
+          { projectStorage: n, taskStorage: e }
+        );
+      })();
       (() => {
         const n = document.querySelector("#right-content");
         return {
           init: () => {
-            n.innerHTML = ((n, r) => {
-              const e = document.createElement("div"),
-                t = document.createElement("h3");
-              t.textContent = "Inbox";
-              const o = document.createElement("p");
-              return (
-                (o.textContent = "Test"),
-                e.appendChild(t),
-                e.appendChild(o),
-                e.outerHTML
-              );
-            })();
+            n.innerHTML = ((n, e) => {
+              const t = document.createElement("div");
+              t.setAttribute("id", "right-container");
+              const r = document.createElement("h3");
+              if (((r.textContent = "Inbox"), t.appendChild(r), null != e))
+                for (let n = 0; n < e.length; n++) {
+                  const r = document.createElement("div");
+                  r.setAttribute("class", "task-div");
+                  const o = document.createElement("button"),
+                    a = document.createElement("p");
+                  a.textContent = e[n].title;
+                  const i = document.createElement("p");
+                  (i.textContent = e[n].dueDate),
+                    r.appendChild(o),
+                    r.appendChild(a),
+                    r.appendChild(i),
+                    t.appendChild(r);
+                }
+              return t.outerHTML;
+            })(m.projectStorage, m.taskStorage);
           },
         };
       })().init();
