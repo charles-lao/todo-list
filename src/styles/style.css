@@ -113,21 +113,27 @@ li#this-week {
   background-color: #def2ff;
 }
 
-#right-content div {
+#right-content #right-container {
   display: flex;
   flex-direction: column;
   padding-left: 120px;
   padding-top: 30px;
-  gap: 30px;
+  gap: 10px;
+}
+
+.task-div {
+  display: flex;
+  gap: 10px;
 }
 
 #right-content h3 {
   font-size: 2rem;
   display: inline;
+  margin-bottom: 20px;
 }
 
 #right-content p {
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 footer {
