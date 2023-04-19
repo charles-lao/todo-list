@@ -13,6 +13,7 @@ const inbox = (projects, tasks) => {
       taskDiv.setAttribute("class", "task-div");
 
       const btn = document.createElement("button");
+      btn.setAttribute("class", "circle-btn");
 
       const taskDetails = document.createElement("p");
       taskDetails.textContent = tasks[i].title;

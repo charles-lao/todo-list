@@ -15,16 +15,16 @@ const storageController = (() => {
     taskStorage = JSON.parse(localStorage.getItem("taskStorage"));
   }
 
-  const testItem = Task(
-    "test title",
-    "test description",
-    "test duedate",
-    "test priority",
-    "default"
-  );
+  // const testItem = Task(
+  //   "test title",
+  //   "test description",
+  //   "test duedate",
+  //   "test priority",
+  //   "default"
+  // );
   // console.log(testItem);
 
-  taskStorage.push(testItem);
+  // taskStorage.push(testItem);
   localStorage.setItem("taskStorage", JSON.stringify(taskStorage));
 
   console.log(taskStorage);

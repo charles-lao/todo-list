@@ -8,42 +8,42 @@
           a = t(645),
           i = t.n(a),
           c = t(667),
-          s = t.n(c),
-          l = new URL(t(937), t.b),
+          l = t.n(c),
+          s = new URL(t(937), t.b),
           p = new URL(t(556), t.b),
           d = new URL(t(195), t.b),
           u = new URL(t(413), t.b),
           f = new URL(t(324), t.b),
           g = new URL(t(152), t.b),
-          m = new URL(t(926), t.b),
-          h = i()(o()),
-          v = s()(l),
-          x = s()(p),
-          b = s()(d),
-          y = s()(u),
-          S = s()(f),
-          w = s()(g),
-          k = s()(m);
-        h.push([
+          h = new URL(t(926), t.b),
+          m = i()(o()),
+          b = l()(s),
+          v = l()(p),
+          x = l()(d),
+          y = l()(u),
+          w = l()(f),
+          S = l()(g),
+          k = l()(h);
+        m.push([
           n.id,
           '@font-face {\n  font-family: "Roboto";\n  src: url(' +
-            v +
-            ');\n}\n\n* {\n  border: 1px solid red;\n  font-family: "Roboto";\n  margin: 0;\n  padding: 0;\n}\n\na {\n  text-decoration: none;\n}\n\n#container {\n  display: flex;\n  flex-direction: column;\n  height: 100vh;\n}\n\nheader,\nfooter {\n  background-color: #1aa3ff;\n  color: white;\n}\n\nheader {\n  flex: 2;\n  display: inline-flex;\n  align-items: center;\n  padding-left: 10px;\n  gap: 5px;\n}\n\nheader img {\n  height: 50px;\n  width: 50px;\n  filter: invert(100%);\n  margin-left: 20px;\n}\n\n#content-section {\n  flex: 18;\n  display: flex;\n}\n\n#left-content {\n  background-color: #ccebff;\n  padding: 30px;\n  gap: 14px;\n  display: flex;\n  flex-direction: column;\n  flex: 1.8;\n}\n\n#left-content ul {\n  list-style-type: none;\n  display: flex;\n  flex-direction: column;\n  gap: 12px;\n  font-size: 1.3rem;\n}\n\nli#inbox,\nli#today,\nli#this-week,\n#add-project,\n.project {\n  background-repeat: no-repeat;\n  background-position: left center;\n  padding-left: 30px;\n  min-height: 10px;\n}\n\nli#inbox:hover,\nli#today:hover,\nli#this-week:hover,\n#add-project:hover,\n.project {\n  cursor: pointer;\n}\n\nli#inbox {\n  background-image: url(' +
-            x +
-            ");\n}\n\nli#today {\n  background-image: url(" +
             b +
+            ');\n}\n\n* {\n  border: 1px solid red;\n  font-family: "Roboto";\n  margin: 0;\n  padding: 0;\n}\n\na {\n  text-decoration: none;\n}\n\n#container {\n  display: flex;\n  flex-direction: column;\n  height: 100vh;\n}\n\nheader,\nfooter {\n  background-color: #1aa3ff;\n  color: white;\n}\n\nheader {\n  flex: 2;\n  display: inline-flex;\n  align-items: center;\n  padding-left: 10px;\n  gap: 5px;\n}\n\nheader img {\n  height: 50px;\n  width: 50px;\n  filter: invert(100%);\n  margin-left: 20px;\n}\n\n#content-section {\n  flex: 18;\n  display: flex;\n}\n\n#left-content {\n  background-color: #ccebff;\n  padding: 30px;\n  gap: 14px;\n  display: flex;\n  flex-direction: column;\n  flex: 1.8;\n}\n\n#left-content ul {\n  list-style-type: none;\n  display: flex;\n  flex-direction: column;\n  gap: 12px;\n  font-size: 1.3rem;\n}\n\nli#inbox,\nli#today,\nli#this-week,\n#add-project,\n.project {\n  background-repeat: no-repeat;\n  background-position: left center;\n  padding-left: 30px;\n  min-height: 10px;\n}\n\nli#inbox:hover,\nli#today:hover,\nli#this-week:hover,\n#add-project:hover,\n.project {\n  cursor: pointer;\n}\n\nli#inbox {\n  background-image: url(' +
+            v +
+            ");\n}\n\nli#today {\n  background-image: url(" +
+            x +
             ");\n}\n\nli#this-week {\n  background-image: url(" +
             y +
             ");\n}\n\n#left-content h3 {\n  margin-top: 12px;\n  font-size: 1.8rem;\n}\n\n.project {\n  background-image: url(" +
-            S +
-            ");\n}\n\n#add-project {\n  font-size: 1.3rem;\n  background-image: url(" +
             w +
-            ");\n}\n\n#right-content {\n  flex: 7;\n  background-color: #def2ff;\n}\n\n#right-content #right-container {\n  display: flex;\n  flex-direction: column;\n  padding-left: 120px;\n  padding-top: 30px;\n  gap: 10px;\n}\n\n.task-div {\n  display: flex;\n  gap: 10px;\n  \n}\n\n#right-content h3 {\n  font-size: 2rem;\n  display: inline;\n  margin-bottom: 20px;\n}\n\n#right-content p {\n  font-size: 1rem;\n}\n\nfooter {\n  display: flex;\n  flex: 1;\n  align-items: center;\n  justify-content: center;\n  font-size: 1rem;\n}\n\nfooter p {\n  background-image: url(" +
+            ");\n}\n\n#add-project {\n  font-size: 1.3rem;\n  background-image: url(" +
+            S +
+            ");\n}\n\n#right-content {\n  flex: 7;\n  background-color: #def2ff;\n}\n\n#right-content #right-container {\n  display: flex;\n  flex-direction: column;\n  padding-left: 100px;\n  padding-top: 30px;\n  padding-right: 20px;\n  gap: 10px;\n}\n\n\n#right-content h3 {\n  font-size: 2rem;\n  display: inline;\n  margin-bottom: 20px;\n}\n\n\n.task-div {\n  display: flex;\n  gap: 10px;\n}\n\n.task-div > p:nth-child(2) {\n  flex: 1;\n  justify-self: end;\n}\n\n.circle-btn {\n  width: 20px;\n  height: 20px;\n  border-radius: 50%;\n  border-color: black;\n  border-width: 2px;\n  background-color: #def2ff;\n}\n\n.circle-btn:hover {\n  cursor: pointer;\n}\n\n#right-content p {\n  font-size: 1rem;\n}\n\nfooter {\n  display: flex;\n  flex: 1;\n  align-items: center;\n  justify-content: center;\n  font-size: 1rem;\n}\n\nfooter p {\n  background-image: url(" +
             k +
             ");\n  background-repeat: no-repeat;\n  background-position: right center;\n  padding-right: 25px;\n  min-height: 10px;\n  color: black;\n  filter: invert(100%);\n}\n",
           "",
         ]);
-        const j = h;
+        const j = m;
       },
       645: (n) => {
         n.exports = function (n) {
@@ -74,11 +74,11 @@
               var i = {};
               if (r)
                 for (var c = 0; c < this.length; c++) {
-                  var s = this[c][0];
-                  null != s && (i[s] = !0);
+                  var l = this[c][0];
+                  null != l && (i[l] = !0);
                 }
-              for (var l = 0; l < n.length; l++) {
-                var p = [].concat(n[l]);
+              for (var s = 0; s < n.length; s++) {
+                var p = [].concat(n[s]);
                 (r && i[p[0]]) ||
                   (void 0 !== a &&
                     (void 0 === p[5] ||
@@ -142,18 +142,18 @@
         }
         function r(n, r) {
           for (var a = {}, i = [], c = 0; c < n.length; c++) {
-            var s = n[c],
-              l = r.base ? s[0] + r.base : s[0],
-              p = a[l] || 0,
-              d = "".concat(l, " ").concat(p);
-            a[l] = p + 1;
+            var l = n[c],
+              s = r.base ? l[0] + r.base : l[0],
+              p = a[s] || 0,
+              d = "".concat(s, " ").concat(p);
+            a[s] = p + 1;
             var u = t(d),
               f = {
-                css: s[1],
-                media: s[2],
-                sourceMap: s[3],
-                supports: s[4],
-                layer: s[5],
+                css: l[1],
+                media: l[2],
+                sourceMap: l[3],
+                supports: l[4],
+                layer: l[5],
               };
             if (-1 !== u) e[u].references++, e[u].updater(f);
             else {
@@ -192,11 +192,11 @@
               var c = t(a[i]);
               e[c].references--;
             }
-            for (var s = r(n, o), l = 0; l < a.length; l++) {
-              var p = t(a[l]);
+            for (var l = r(n, o), s = 0; s < a.length; s++) {
+              var p = t(a[s]);
               0 === e[p].references && (e[p].updater(), e.splice(p, 1));
             }
-            a = s;
+            a = l;
           };
         };
       },
@@ -365,36 +365,28 @@
         a = t(569),
         i = t.n(a),
         c = t(565),
-        s = t.n(c),
-        l = t(216),
-        p = t.n(l),
+        l = t.n(c),
+        s = t(216),
+        p = t.n(s),
         d = t(589),
         u = t.n(d),
         f = t(890),
         g = {};
       (g.styleTagTransform = u()),
-        (g.setAttributes = s()),
+        (g.setAttributes = l()),
         (g.insert = i().bind(null, "head")),
         (g.domAPI = o()),
         (g.insertStyleElement = p()),
         e()(f.Z, g),
         f.Z && f.Z.locals && f.Z.locals;
-      const m = (() => {
+      const h = (() => {
         let n = [],
           e = [];
-        null !== localStorage.getItem("projectStorage") &&
-          (n = JSON.parse(localStorage.getItem("projectStorage"))),
-          null !== localStorage.getItem("taskStorage") &&
-            (e = JSON.parse(localStorage.getItem("taskStorage")));
-        const t = {
-          title: "test title",
-          description: "test description",
-          dueDate: "test duedate",
-          priority: "test priority",
-          project: "default",
-        };
         return (
-          e.push(t),
+          null !== localStorage.getItem("projectStorage") &&
+            (n = JSON.parse(localStorage.getItem("projectStorage"))),
+          null !== localStorage.getItem("taskStorage") &&
+            (e = JSON.parse(localStorage.getItem("taskStorage"))),
           localStorage.setItem("taskStorage", JSON.stringify(e)),
           console.log(e),
           { projectStorage: n, taskStorage: e }
@@ -412,8 +404,9 @@
                 for (let n = 0; n < e.length; n++) {
                   const r = document.createElement("div");
                   r.setAttribute("class", "task-div");
-                  const o = document.createElement("button"),
-                    a = document.createElement("p");
+                  const o = document.createElement("button");
+                  o.setAttribute("class", "circle-btn");
+                  const a = document.createElement("p");
                   a.textContent = e[n].title;
                   const i = document.createElement("p");
                   (i.textContent = e[n].dueDate),
@@ -423,7 +416,7 @@
                     t.appendChild(r);
                 }
               return t.outerHTML;
-            })(m.projectStorage, m.taskStorage);
+            })(h.projectStorage, h.taskStorage);
           },
         };
       })().init();
