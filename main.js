@@ -38,7 +38,7 @@
             w +
             ");\n}\n\n#add-project {\n  font-size: 1.3rem;\n  background-image: url(" +
             S +
-            ");\n}\n\n#right-content {\n  flex: 7;\n  background-color: #def2ff;\n}\n\n#right-content #right-container {\n  display: flex;\n  flex-direction: column;\n  padding-left: 100px;\n  padding-top: 30px;\n  padding-right: 20px;\n  gap: 10px;\n}\n\n\n#right-content h3 {\n  font-size: 2rem;\n  display: inline;\n  margin-bottom: 20px;\n}\n\n\n.task-div {\n  display: flex;\n  gap: 10px;\n}\n\n.task-div > p:nth-child(2) {\n  flex: 1;\n  justify-self: end;\n}\n\n.circle-btn {\n  width: 20px;\n  height: 20px;\n  border-radius: 50%;\n  border-color: black;\n  border-width: 2px;\n  background-color: #def2ff;\n}\n\n.circle-btn:hover {\n  cursor: pointer;\n}\n\n#right-content p {\n  font-size: 1rem;\n}\n\nfooter {\n  display: flex;\n  flex: 1;\n  align-items: center;\n  justify-content: center;\n  font-size: 1rem;\n}\n\nfooter p {\n  background-image: url(" +
+            ");\n}\n\n#right-content {\n  flex: 7;\n  background-color: #def2ff;\n}\n\n#right-content #right-container {\n  display: flex;\n  flex-direction: column;\n  padding-left: 100px;\n  padding-top: 30px;\n  padding-right: 20px;\n  gap: 10px;\n}\n\n#right-content h3 {\n  font-size: 2rem;\n  display: inline;\n  margin-bottom: 20px;\n}\n\n.task-div {\n  display: flex;\n  gap: 10px;\n}\n\n.task-div > p:nth-child(2) {\n  flex: 1;\n  justify-self: end;\n}\n\n.circle-btn {\n  width: 20px;\n  height: 20px;\n  border-radius: 50%;\n  border-color: black;\n  border-width: 2px;\n  background-color: #def2ff;\n}\n\n.circle-btn:hover {\n  cursor: pointer;\n}\n\n#right-content p {\n  font-size: 1rem;\n}\n\nfooter {\n  display: flex;\n  flex: 1;\n  align-items: center;\n  justify-content: center;\n  font-size: 1rem;\n}\n\nfooter p {\n  background-image: url(" +
             k +
             ");\n  background-repeat: no-repeat;\n  background-position: right center;\n  padding-right: 25px;\n  min-height: 10px;\n  color: black;\n  filter: invert(100%);\n}\n",
           "",
@@ -358,28 +358,7 @@
     (t.b = document.baseURI || self.location.href),
     (t.nc = void 0),
     (() => {
-      var n = t(379),
-        e = t.n(n),
-        r = t(795),
-        o = t.n(r),
-        a = t(569),
-        i = t.n(a),
-        c = t(565),
-        l = t.n(c),
-        s = t(216),
-        p = t.n(s),
-        d = t(589),
-        u = t.n(d),
-        f = t(890),
-        g = {};
-      (g.styleTagTransform = u()),
-        (g.setAttributes = l()),
-        (g.insert = i().bind(null, "head")),
-        (g.domAPI = o()),
-        (g.insertStyleElement = p()),
-        e()(f.Z, g),
-        f.Z && f.Z.locals && f.Z.locals;
-      const h = (() => {
+      const n = (() => {
         let n = [],
           e = [];
         return (
@@ -392,11 +371,32 @@
           { projectStorage: n, taskStorage: e }
         );
       })();
-      (() => {
-        const n = document.querySelector("#right-content");
+      var e = t(379),
+        r = t.n(e),
+        o = t(795),
+        a = t.n(o),
+        i = t(569),
+        c = t.n(i),
+        l = t(565),
+        s = t.n(l),
+        p = t(216),
+        d = t.n(p),
+        u = t(589),
+        f = t.n(u),
+        g = t(890),
+        h = {};
+      (h.styleTagTransform = f()),
+        (h.setAttributes = s()),
+        (h.insert = c().bind(null, "head")),
+        (h.domAPI = a()),
+        (h.insertStyleElement = d()),
+        r()(g.Z, h),
+        g.Z && g.Z.locals && g.Z.locals;
+      const m = (() => {
+        const e = document.querySelector("#right-content");
         return {
           init: () => {
-            n.innerHTML = ((n, e) => {
+            e.innerHTML = ((n, e) => {
               const t = document.createElement("div");
               t.setAttribute("id", "right-container");
               const r = document.createElement("h3");
@@ -415,10 +415,14 @@
                     r.appendChild(i),
                     t.appendChild(r);
                 }
-              return t.outerHTML;
-            })(h.projectStorage, h.taskStorage);
+              return m.testDisplay(), t.outerHTML;
+            })(n.projectStorage, n.taskStorage);
+          },
+          testDisplay: () => {
+            alert("success");
           },
         };
-      })().init();
+      })();
+      m.init();
     })();
 })();
