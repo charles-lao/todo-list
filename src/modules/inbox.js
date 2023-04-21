@@ -1,3 +1,6 @@
+import display from "./display";
+import "../styles/style.css";
+
 const inbox = (projects, tasks) => {
   const inboxDiv = document.createElement("div");
   inboxDiv.setAttribute("id", "right-container");
@@ -28,6 +31,8 @@ const inbox = (projects, tasks) => {
       inboxDiv.appendChild(taskDiv);
     }
   }
+
+  display.testDisplay();
 
   return inboxDiv.outerHTML;
 };
