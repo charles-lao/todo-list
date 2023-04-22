@@ -1,7 +1,9 @@
 import display from "./display";
 import "../styles/style.css";
+import storage from './storage';
 
-const inbox = (projects, tasks) => {
+
+const displayInbox = (projects, tasks) => {
   const inboxDiv = document.createElement("div");
   inboxDiv.setAttribute("id", "right-container");
 
@@ -17,24 +19,40 @@ const inbox = (projects, tasks) => {
 
       const btn = document.createElement("button");
       btn.setAttribute("class", "circle-btn");
+      btn.setAttribute('data-index', i);
 
       const taskDetails = document.createElement("p");
       taskDetails.textContent = tasks[i].title;
 
       const taskDueDate = document.createElement("p");
-      taskDueDate.textContent = tasks[i].dueDate;
+      taskDueDate.textContent = tasks[i].dueDate;   
+
+      
 
       taskDiv.appendChild(btn);
       taskDiv.appendChild(taskDetails);
       taskDiv.appendChild(taskDueDate);
-
+  
       inboxDiv.appendChild(taskDiv);
     }
   }
 
-  display.testDisplay();
+  // display.testDisplay();
 
   return inboxDiv.outerHTML;
 };
 
-export default inbox;
+
+const setInboxListeners = () => {
+  const buttons = document.querySelectorAll(".circle-btn");
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", (e) => {
+      alert(e);
+    });
+  });
+};
+
+
+
+export { displayInbox, setInboxListeners };

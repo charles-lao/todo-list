@@ -21,13 +21,21 @@ const storage = (() => {
   // console.log(testItem);
 
   // taskStorage.push(testItem);
-  localStorage.setItem("taskStorage", JSON.stringify(taskStorage));
+  
+  // copy the current value of the variables to the local storage
+  const updateLocal = () => {
+
+    localStorage.setItem("taskStorage", JSON.stringify(taskStorage));
+    localStorage.setItem("projectStorage", JSON.stringify(projectStorage));
+
+  };
 
   console.log(taskStorage);
 
   return {
     projectStorage,
     taskStorage,
+    updateLocal,
   };
 })();
 
