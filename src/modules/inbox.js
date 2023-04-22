@@ -1,61 +1,58 @@
 import display from "./display";
 import "../styles/style.css";
-import storage from './storage';
+import storage from "./storage";
 
+const inbox = (() => {
+  const displayContent = (projects, tasks) => {
+    const inboxDiv = document.createElement("div");
+    inboxDiv.setAttribute("id", "right-container");
 
-const displayInbox = (projects, tasks) => {
-  const inboxDiv = document.createElement("div");
-  inboxDiv.setAttribute("id", "right-container");
+    const inboxHeading = document.createElement("h3");
+    inboxHeading.textContent = "Inbox";
 
-  const inboxHeading = document.createElement("h3");
-  inboxHeading.textContent = "Inbox";
+    inboxDiv.appendChild(inboxHeading);
 
-  inboxDiv.appendChild(inboxHeading);
+    if (tasks != null) {
+      for (let i = 0; i < tasks.length; i++) {
+        const taskDiv = document.createElement("div");
+        taskDiv.setAttribute("class", "task-div");
 
-  if (tasks != null) {
-    for (let i = 0; i < tasks.length; i++) {
-      const taskDiv = document.createElement("div");
-      taskDiv.setAttribute("class", "task-div");
+        const btn = document.createElement("button");
+        btn.setAttribute("class", "circle-btn");
+        btn.setAttribute("data-id", tasks[i].idNo);
 
-      const btn = document.createElement("button");
-      btn.setAttribute("class", "circle-btn");
-      btn.setAttribute('data-id', tasks[i].idNo);
+        const taskDetails = document.createElement("p");
+        taskDetails.textContent = tasks[i].title;
 
-      const taskDetails = document.createElement("p");
-      taskDetails.textContent = tasks[i].title;
+        const taskDueDate = document.createElement("p");
+        taskDueDate.textContent = tasks[i].dueDate;
 
-      const taskDueDate = document.createElement("p");
-      taskDueDate.textContent = tasks[i].dueDate;   
+        taskDiv.appendChild(btn);
+        taskDiv.appendChild(taskDetails);
+        taskDiv.appendChild(taskDueDate);
 
-      
-
-      taskDiv.appendChild(btn);
-      taskDiv.appendChild(taskDetails);
-      taskDiv.appendChild(taskDueDate);
-  
-      inboxDiv.appendChild(taskDiv);
+        inboxDiv.appendChild(taskDiv);
+      }
     }
-  }
 
-  // display.testDisplay();
+    // display.testDisplay();
 
-  return inboxDiv.outerHTML;
-};
+    return inboxDiv.outerHTML;
+  };
 
+  const setListeners = () => {
+    const buttons = document.querySelectorAll(".circle-btn");
 
-const setInboxListeners = () => {
-  const buttons = document.querySelectorAll(".circle-btn");
+    buttons.forEach((button) => {
+      button.addEventListener("click", (e) => {
+        const dataId = e.target.getAttribute("data-id");
 
-  buttons.forEach((button) => {
-
-    button.addEventListener("click", (e) => {
-      const dataId = e.target.getAttribute("data-id");
-      console.log(dataId);
+        storage.deleteTask(dataId, "default");
+      });
     });
+  };
 
-  });
-};
+  return { displayContent, setListeners };
+})();
 
-
-
-export { displayInbox, setInboxListeners };
+export default inbox;
