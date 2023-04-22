@@ -19,7 +19,7 @@ const displayInbox = (projects, tasks) => {
 
       const btn = document.createElement("button");
       btn.setAttribute("class", "circle-btn");
-      btn.setAttribute('data-index', i);
+      btn.setAttribute('data-id', tasks[i].idNo);
 
       const taskDetails = document.createElement("p");
       taskDetails.textContent = tasks[i].title;
@@ -47,9 +47,12 @@ const setInboxListeners = () => {
   const buttons = document.querySelectorAll(".circle-btn");
 
   buttons.forEach((button) => {
+
     button.addEventListener("click", (e) => {
-      alert(e);
+      const dataId = e.target.getAttribute("data-id");
+      console.log(dataId);
     });
+
   });
 };
 
