@@ -155,6 +155,43 @@ li#this-week {
   font-size: 1rem;
 }
 
+#add-task-div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+input[type="text"] {
+  border-radius: 10px;
+  height: 1.5rem;
+}
+
+#add-task-div div {
+  display: flex;
+  gap: 10px;
+}
+
+#add-task-btn,
+#cancel-task-btn {
+  flex: 1;
+  border-radius: 10px;
+  height: 1.6rem;
+  font-size: 1rem;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  cursor: pointer;
+}
+
+#add-task-btn {
+  background-color: #81cb7e;
+  border-color: #81cb7e;
+}
+
+#cancel-task-btn {
+  background-color: #d1ad9e;
+  border-color: #d1ad9e;
+}
+
 footer {
   display: flex;
   flex: 1;

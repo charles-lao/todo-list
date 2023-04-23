@@ -35,6 +35,29 @@ const inbox = (() => {
       }
     }
 
+    const addTaskDiv = document.createElement("div");
+    addTaskDiv.setAttribute("id", "add-task-div");
+
+    const addTaskInput = document.createElement("input");
+    addTaskInput.setAttribute("type", "text");
+
+    const btnDiv = document.createElement("div");
+
+    const addBtn = document.createElement("button");
+    addBtn.setAttribute("id", "add-task-btn");
+    addBtn.textContent = "Add";
+
+    const cancelBtn = document.createElement("button");
+    cancelBtn.setAttribute("id", "cancel-task-btn");
+    cancelBtn.textContent = "Cancel";
+
+    addTaskDiv.appendChild(addTaskInput);
+    btnDiv.appendChild(addBtn);
+    btnDiv.appendChild(cancelBtn);
+    addTaskDiv.appendChild(btnDiv);
+
+    inboxDiv.appendChild(addTaskDiv);
+
     // display.testDisplay();
 
     return inboxDiv.outerHTML;
