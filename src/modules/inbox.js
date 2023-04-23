@@ -3,6 +3,7 @@ import "../styles/style.css";
 import storage from "./storage";
 
 const inbox = (() => {
+
   const displayContent = (projects, tasks) => {
     const inboxDiv = document.createElement("div");
     inboxDiv.setAttribute("id", "right-container");
@@ -47,6 +48,7 @@ const inbox = (() => {
       button.addEventListener("click", (e) => {
         const dataId = e.target.getAttribute("data-id");
 
+        // call the delete task
         storage.deleteTask(dataId, "default");
       });
     });

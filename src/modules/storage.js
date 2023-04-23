@@ -1,3 +1,4 @@
+import { format } from 'date-fns';
 import Task from "./task";
 import display from "./display";
 
@@ -34,7 +35,7 @@ const storage = (() => {
     Date.now(),
     "4 test title",
     "4 test description",
-    "4 test duedate",
+    format(new Date(), 'MM/dd/yyyy'),
     "4 test priority",
     "default"
   );

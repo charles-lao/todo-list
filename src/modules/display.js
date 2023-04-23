@@ -2,11 +2,12 @@
 /* eslint-disable import/no-cycle */
 import storage from "./storage";
 import inbox from "./inbox";
+import today from './today';
 
 const display = (() => {
   const rightContent = document.querySelector("#right-content");
 
-  const init = () => {
+  const displayInbox = () => {
     rightContent.innerHTML = inbox.displayContent(
       storage.projectStorage,
       storage.taskStorage
@@ -14,30 +15,44 @@ const display = (() => {
     inbox.setListeners();
   };
 
+  const displayToday = () => {
+    rightContent.innerHTML = today.displayContent(
+      storage.projectStorage,
+      storage.taskStorage
+    );
+    today.setListeners();
+  }
+
+
+  // initialize
+  const init = () => {
+    displayInbox();
+  };
+
   const testDisplay = () => {
     alert("success");
   };
 
   const refreshContent = (project) => {
-    rightContent.innerHTML = "";
 
     switch (project) {
       case "default":
-        rightContent.innerHTML = inbox.displayContent(
-          storage.projectStorage,
-          storage.taskStorage
-        );
-        inbox.setListeners();
+        displayInbox();
         break;
+
+      case 'today':
+        displayToday();
+        break;
+
       default:
-        rightContent.innerHTML = inbox.displayContent(
-          storage.projectStorage,
-          storage.taskStorage
-        );
-        inbox.setListeners();
+        displayInbox();
         break;
     }
   };
+
+  
+
+  
 
   return {
     init,
