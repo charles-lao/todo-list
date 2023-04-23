@@ -3,7 +3,6 @@ import "../styles/style.css";
 import storage from "./storage";
 
 const inbox = (() => {
-
   const displayContent = (projects, tasks) => {
     const inboxDiv = document.createElement("div");
     inboxDiv.setAttribute("id", "right-container");

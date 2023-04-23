@@ -2,7 +2,8 @@
 /* eslint-disable import/no-cycle */
 import storage from "./storage";
 import inbox from "./inbox";
-import today from './today';
+import today from "./today";
+import thisWeek from "./thisWeek";
 
 const display = (() => {
   const rightContent = document.querySelector("#right-content");
@@ -21,12 +22,14 @@ const display = (() => {
       storage.taskStorage
     );
     today.setListeners();
-  }
+  };
 
-
-  // initialize
-  const init = () => {
-    displayInbox();
+  const displayThisWeek = () => {
+    rightContent.innerHTML = thisWeek.displayContent(
+      storage.projectStorage,
+      storage.taskStorage
+    );
+    today.setListeners();
   };
 
   const testDisplay = () => {
@@ -34,14 +37,17 @@ const display = (() => {
   };
 
   const refreshContent = (project) => {
-
     switch (project) {
       case "default":
         displayInbox();
         break;
 
-      case 'today':
+      case "today":
         displayToday();
+        break;
+
+      case "this-week":
+        displayThisWeek();
         break;
 
       default:
@@ -50,9 +56,30 @@ const display = (() => {
     }
   };
 
-  
+  const setListeners = () => {
+    const inboxLi = document.querySelector("#inbox");
+    const todayLi = document.querySelector("#today");
+    const thisWeekLi = document.querySelector("#this-week");
 
-  
+    inboxLi.addEventListener("click", () => {
+      displayInbox();
+    });
+
+    // display today when clicked
+    todayLi.addEventListener("click", () => {
+      displayToday();
+    });
+
+    thisWeekLi.addEventListener("click", () => {
+      displayThisWeek();
+    });
+  };
+
+  // initialize
+  const init = () => {
+    displayInbox();
+    setListeners();
+  };
 
   return {
     init,

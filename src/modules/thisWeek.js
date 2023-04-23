@@ -1,9 +1,9 @@
-import { format } from "date-fns";
+import { format, isThisWeek, parse } from "date-fns";
 import display from "./display";
 import "../styles/style.css";
 import storage from "./storage";
 
-const today = (() => {
+const thisWeek = (() => {
   const displayContent = (projects, tasks) => {
     const inboxDiv = document.createElement("div");
     inboxDiv.setAttribute("id", "right-container");
@@ -14,11 +14,11 @@ const today = (() => {
     inboxDiv.appendChild(inboxHeading);
 
     if (tasks != null) {
-      const dateNow = format(new Date(), "MM/dd/yyyy");
-
       for (let i = 0; i < tasks.length; i++) {
-        // compare date and check if dueDate is equal to today
-        if (tasks[i].dueDate == dateNow) {
+        // parse the date string back to ISO
+        const dateNow = parse(tasks[i].dueDate, "MM/dd/yyyy", new Date());
+
+        if (isThisWeek(dateNow)) {
           const taskDiv = document.createElement("div");
           taskDiv.setAttribute("class", "task-div");
 
@@ -52,7 +52,7 @@ const today = (() => {
         const dataId = e.target.getAttribute("data-id");
 
         // call the delete task
-        storage.deleteTask(dataId, "today");
+        storage.deleteTask(dataId, "this-week");
       });
     });
   };
@@ -60,4 +60,4 @@ const today = (() => {
   return { displayContent, setListeners };
 })();
 
-export default today;
+export default thisWeek;
