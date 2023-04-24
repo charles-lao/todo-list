@@ -36,6 +36,7 @@ const display = (() => {
     alert("success");
   };
 
+  // redisplays the current content
   const refreshContent = (project) => {
     switch (project) {
       case "default":

@@ -17,7 +17,6 @@ a {
 #container {
   display: flex;
   flex-direction: column;
-  height: 100vh;
 }
 
 header,
@@ -32,6 +31,7 @@ header {
   align-items: center;
   padding-left: 10px;
   gap: 5px;
+  top: 0;
 }
 
 header img {
@@ -160,11 +160,13 @@ li#this-week {
   display: none;
   flex-direction: column;
   gap: 5px;
+  margin-bottom: 10px;
 }
 
 input[type="text"] {
   border-radius: 10px;
   height: 1.5rem;
+  padding-left: 5px;
 }
 
 #add-task-div div {
@@ -176,6 +178,7 @@ input[type="text"] {
   display: inline-flex;
   background-image: url("../images/plus.svg");
   cursor: pointer;
+  margin-bottom: 10px;
 }
 
 #add-task-btn,

@@ -44,6 +44,7 @@ const inbox = (() => {
 
     const addTaskInput = document.createElement("input");
     addTaskInput.setAttribute("type", "text");
+    addTaskInput.setAttribute("id", "add-task-input");
 
     const btnDiv = document.createElement("div");
 
@@ -71,6 +72,8 @@ const inbox = (() => {
     const addTaskH4 = document.querySelector("#add-task-h4");
     const addTaskDiv = document.querySelector("#add-task-div");
     const cancelTaskBtn = document.querySelector("#cancel-task-btn");
+    const addTaskBtn = document.querySelector("#add-task-btn");
+    const addTaskInput = document.querySelector("#add-task-input");
 
     buttons.forEach((button) => {
       button.addEventListener("click", (e) => {
@@ -90,6 +93,11 @@ const inbox = (() => {
     cancelTaskBtn.addEventListener("click", (e) => {
       addTaskH4.style.display = "inline-flex";
       addTaskDiv.style.display = "none";
+    });
+
+    addTaskBtn.addEventListener("click", (e) => {
+      storage.addTask(addTaskInput.value, "default");
+      display.refreshContent("default");
     });
   };
 

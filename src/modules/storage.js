@@ -31,6 +31,20 @@ const storage = (() => {
     }
   };
 
+  const addTask = (title, project) => {
+    const newTask = Task(
+      Date.now(), // unique id
+      title,
+      "description",
+      format(new Date(), "MM/dd/yyyy"),
+      "low",
+      project
+    );
+
+    taskStorage.push(newTask);
+    updateLocalStorage();
+  };
+
   const testItem = Task(
     Date.now(),
     "4 test title",
@@ -49,6 +63,7 @@ const storage = (() => {
     taskStorage,
     updateLocalStorage,
     deleteTask,
+    addTask,
   };
 })();
 
