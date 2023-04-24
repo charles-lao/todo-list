@@ -38,6 +38,10 @@ const inbox = (() => {
     const addTaskDiv = document.createElement("div");
     addTaskDiv.setAttribute("id", "add-task-div");
 
+    const addTaskH4 = document.createElement("h4");
+    addTaskH4.textContent = "Add Task";
+    addTaskH4.setAttribute("id", "add-task-h4");
+
     const addTaskInput = document.createElement("input");
     addTaskInput.setAttribute("type", "text");
 
@@ -56,15 +60,17 @@ const inbox = (() => {
     btnDiv.appendChild(cancelBtn);
     addTaskDiv.appendChild(btnDiv);
 
+    inboxDiv.appendChild(addTaskH4);
     inboxDiv.appendChild(addTaskDiv);
-
-    // display.testDisplay();
 
     return inboxDiv.outerHTML;
   };
 
   const setListeners = () => {
     const buttons = document.querySelectorAll(".circle-btn");
+    const addTaskH4 = document.querySelector("#add-task-h4");
+    const addTaskDiv = document.querySelector("#add-task-div");
+    const cancelTaskBtn = document.querySelector("#cancel-task-btn");
 
     buttons.forEach((button) => {
       button.addEventListener("click", (e) => {
@@ -73,6 +79,17 @@ const inbox = (() => {
         // call the delete task
         storage.deleteTask(dataId, "default");
       });
+    });
+
+    // listener to toggle the display of add task elements
+    addTaskH4.addEventListener("click", (e) => {
+      addTaskH4.style.display = "none";
+      addTaskDiv.style.display = "flex";
+    });
+
+    cancelTaskBtn.addEventListener("click", (e) => {
+      addTaskH4.style.display = "inline-flex";
+      addTaskDiv.style.display = "none";
     });
   };
 
