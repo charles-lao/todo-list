@@ -45,6 +45,7 @@ const inbox = (() => {
     const addTaskInput = document.createElement("input");
     addTaskInput.setAttribute("type", "text");
     addTaskInput.setAttribute("id", "add-task-input");
+    addTaskInput.setAttribute("placeholder", "Task name");
 
     const btnDiv = document.createElement("div");
 

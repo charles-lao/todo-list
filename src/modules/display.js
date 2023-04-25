@@ -57,10 +57,12 @@ const display = (() => {
     }
   };
 
+  // contains all the listeners for the homepage
   const setListeners = () => {
     const inboxLi = document.querySelector("#inbox");
     const todayLi = document.querySelector("#today");
     const thisWeekLi = document.querySelector("#this-week");
+    const addProject = document.querySelector("#add-project");
 
     inboxLi.addEventListener("click", () => {
       displayInbox();
@@ -73,6 +75,10 @@ const display = (() => {
 
     thisWeekLi.addEventListener("click", () => {
       displayThisWeek();
+    });
+
+    addProject.addEventListener("click", (e) => {
+      // add function for displaying the text input for new projects
     });
   };
 

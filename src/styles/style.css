@@ -31,14 +31,14 @@ header {
   align-items: center;
   padding-left: 10px;
   gap: 5px;
-  top: 0;
+  cursor: pointer;
 }
 
 header img {
   height: 50px;
   width: 50px;
-
   margin-left: 20px;
+  cursor: pointer;
 }
 
 #content-section {
@@ -109,6 +109,13 @@ li#this-week {
   background-image: url("../images/plus.svg");
 }
 
+#add-project-div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
 #right-content {
   flex: 7;
   background-color: #def2ff;
@@ -125,8 +132,9 @@ li#this-week {
 
 #right-content h3 {
   font-size: 2rem;
-  display: inline;
+  display: inline-flex;
   margin-bottom: 20px;
+  cursor: pointer;
 }
 
 .task-div {
@@ -154,6 +162,7 @@ li#this-week {
 
 #right-content p {
   font-size: 1rem;
+  cursor: pointer;
 }
 
 #add-task-div {
@@ -169,6 +178,7 @@ input[type="text"] {
   padding-left: 5px;
 }
 
+#add-project-div div,
 #add-task-div div {
   display: flex;
   gap: 10px;
@@ -181,6 +191,8 @@ input[type="text"] {
   margin-bottom: 10px;
 }
 
+#add-project-btn,
+#cancel-project-btn,
 #add-task-btn,
 #cancel-task-btn {
   flex: 1;
@@ -192,14 +204,16 @@ input[type="text"] {
   cursor: pointer;
 }
 
+#add-project-btn,
 #add-task-btn {
-  background-color: #81cb7e;
-  border-color: #81cb7e;
+  background-color: #aaffaa;
+  border-color: #93fe93;
 }
 
+#cancel-project-btn,
 #cancel-task-btn {
-  background-color: #d1ad9e;
-  border-color: #d1ad9e;
+  background-color: #ffbebe;
+  border-color: #ffa6a6;
 }
 
 footer {
