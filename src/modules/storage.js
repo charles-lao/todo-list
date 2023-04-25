@@ -45,18 +45,23 @@ const storage = (() => {
     updateLocalStorage();
   };
 
-  const testItem = Task(
-    Date.now(),
-    "4 test title",
-    "4 test description",
-    format(new Date(), "MM/dd/yyyy"),
-    "4 test priority",
-    "default"
-  );
-  console.log(testItem);
+  const addProject = (name) => {
+    projectStorage.push(name);
+    updateLocalStorage();
+  };
 
-  taskStorage.push(testItem);
-  updateLocalStorage();
+  // const testItem = Task(
+  //   Date.now(),
+  //   "4 test title",
+  //   "4 test description",
+  //   format(new Date(), "MM/dd/yyyy"),
+  //   "4 test priority",
+  //   "default"
+  // );
+  // console.log(testItem);
+
+  // taskStorage.push(testItem);
+  // updateLocalStorage();
 
   return {
     projectStorage,
@@ -64,6 +69,7 @@ const storage = (() => {
     updateLocalStorage,
     deleteTask,
     addTask,
+    addProject,
   };
 })();
 

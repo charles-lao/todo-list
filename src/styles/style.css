@@ -102,6 +102,18 @@ li#this-week {
 
 .project {
   background-image: url("../images/format-list-bulleted.svg");
+  display: inline-flex;
+}
+
+.project p:first-child {
+  flex: 6;
+}
+.x-project {
+  flex: 1;
+  font-weight: bolder;
+  align-self: end;
+  justify-self: end;
+  text-align: center;
 }
 
 #add-project {

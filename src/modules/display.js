@@ -32,8 +32,26 @@ const display = (() => {
     today.setListeners();
   };
 
-  const testDisplay = () => {
-    alert("success");
+  const displayProjects = () => {
+    if (storage.projectStorage != null) {
+      for (let i = 0; i < storage.projectStorage.length; i++) {
+        const projectsList = document.querySelector("#projects-list");
+        const projectLi = document.createElement("li");
+        projectLi.setAttribute("class", "project");
+
+        const xBtn = document.createElement("p");
+        xBtn.textContent = "X";
+        xBtn.setAttribute("class", "x-project");
+
+        const projectName = document.createElement("p");
+        projectName.textContent = storage.projectStorage[i];
+
+        projectLi.appendChild(projectName);
+        // projectLi.textContent = storage.projectStorage[i];
+        projectLi.appendChild(xBtn);
+        projectsList.appendChild(projectLi);
+      }
+    }
   };
 
   // redisplays the current content
@@ -62,7 +80,10 @@ const display = (() => {
     const inboxLi = document.querySelector("#inbox");
     const todayLi = document.querySelector("#today");
     const thisWeekLi = document.querySelector("#this-week");
+    const addProjectInput = document.querySelector("#add-project-input");
     const addProject = document.querySelector("#add-project");
+    const addProjectBtn = document.querySelector("#add-project-btn");
+    const cancelProjectBtn = document.querySelector("#cancel-project-btn");
 
     inboxLi.addEventListener("click", () => {
       displayInbox();
@@ -80,17 +101,22 @@ const display = (() => {
     addProject.addEventListener("click", (e) => {
       // add function for displaying the text input for new projects
     });
+
+    addProjectBtn.addEventListener("click", (e) => {
+      // storage.addProject(addProjectInput.value);
+      alert(storage.projectStorage);
+    });
   };
 
   // initialize
   const init = () => {
     displayInbox();
     setListeners();
+    displayProjects();
   };
 
   return {
     init,
-    testDisplay,
     refreshContent,
   };
 })();
