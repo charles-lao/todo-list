@@ -33,9 +33,13 @@ const display = (() => {
   };
 
   const displayProjects = () => {
+
+    const projectsList = document.querySelector("#projects-list");
+    projectsList.textContent = '';
+
     if (storage.projectStorage != null) {
       for (let i = 0; i < storage.projectStorage.length; i++) {
-        const projectsList = document.querySelector("#projects-list");
+        
         const projectLi = document.createElement("li");
         projectLi.setAttribute("class", "project");
 
@@ -103,8 +107,8 @@ const display = (() => {
     });
 
     addProjectBtn.addEventListener("click", (e) => {
-      // storage.addProject(addProjectInput.value);
-      alert(storage.projectStorage);
+      storage.addProject(addProjectInput.value);
+      displayProjects();
     });
   };
 
