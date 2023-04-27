@@ -33,13 +33,11 @@ const display = (() => {
   };
 
   const displayProjects = () => {
-
     const projectsList = document.querySelector("#projects-list");
-    projectsList.textContent = '';
+    projectsList.textContent = "";
 
     if (storage.projectStorage != null) {
       for (let i = 0; i < storage.projectStorage.length; i++) {
-        
         const projectLi = document.createElement("li");
         projectLi.setAttribute("class", "project");
 
@@ -84,6 +82,7 @@ const display = (() => {
     const inboxLi = document.querySelector("#inbox");
     const todayLi = document.querySelector("#today");
     const thisWeekLi = document.querySelector("#this-week");
+    const addProjectDiv = document.querySelector("#add-project-div");
     const addProjectInput = document.querySelector("#add-project-input");
     const addProject = document.querySelector("#add-project");
     const addProjectBtn = document.querySelector("#add-project-btn");
@@ -102,8 +101,15 @@ const display = (() => {
       displayThisWeek();
     });
 
+    // toggles the display of add project div and the h3
     addProject.addEventListener("click", (e) => {
-      // add function for displaying the text input for new projects
+      addProjectDiv.style.display = "flex";
+      addProject.style.display = "none";
+    });
+
+    cancelProjectBtn.addEventListener("click", (e) => {
+      addProjectDiv.style.display = "none";
+      addProject.style.display = "flex";
     });
 
     addProjectBtn.addEventListener("click", (e) => {

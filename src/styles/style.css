@@ -17,6 +17,7 @@ a {
 #container {
   display: flex;
   flex-direction: column;
+  height: 100vh;
 }
 
 header,
@@ -122,7 +123,7 @@ li#this-week {
 }
 
 #add-project-div {
-  display: flex;
+  display: none;
   flex-direction: column;
   gap: 5px;
   margin-bottom: 10px;
