@@ -44,9 +44,12 @@ const display = (() => {
         const xBtn = document.createElement("p");
         xBtn.textContent = "X";
         xBtn.setAttribute("class", "x-project");
+        xBtn.setAttribute("data-index", i);
 
         const projectName = document.createElement("p");
         projectName.textContent = storage.projectStorage[i];
+        projectName.setAttribute("class", "project-name");
+        projectName.setAttribute("data-index", i);
 
         projectLi.appendChild(projectName);
         // projectLi.textContent = storage.projectStorage[i];
@@ -87,6 +90,7 @@ const display = (() => {
     const addProject = document.querySelector("#add-project");
     const addProjectBtn = document.querySelector("#add-project-btn");
     const cancelProjectBtn = document.querySelector("#cancel-project-btn");
+    const xProjectBtns = document.querySelectorAll(".x-project");
 
     inboxLi.addEventListener("click", () => {
       displayInbox();
@@ -116,13 +120,21 @@ const display = (() => {
       storage.addProject(addProjectInput.value);
       displayProjects();
     });
+
+    xProjectBtns.forEach((xProjectBtn) => {
+      xProjectBtn.addEventListener("click", (e) => {
+        const projectIndex = e.target.getAttribute("data-index");
+        storage.deleteProject(projectIndex);
+        displayProjects();
+      });
+    });
   };
 
   // initialize
   const init = () => {
     displayInbox();
-    setListeners();
     displayProjects();
+    setListeners();
   };
 
   return {

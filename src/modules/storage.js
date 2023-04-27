@@ -50,6 +50,11 @@ const storage = (() => {
     updateLocalStorage();
   };
 
+  const deleteProject = (index) => {
+    projectStorage.splice(index, 1);
+    updateLocalStorage();
+  };
+
   // const testItem = Task(
   //   Date.now(),
   //   "4 test title",
@@ -70,6 +75,7 @@ const storage = (() => {
     deleteTask,
     addTask,
     addProject,
+    deleteProject,
   };
 })();
 
