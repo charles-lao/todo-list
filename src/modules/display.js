@@ -4,6 +4,7 @@ import storage from "./storage";
 import inbox from "./inbox";
 import today from "./today";
 import thisWeek from "./thisWeek";
+import projectPage from "./projectPage";
 
 const display = (() => {
   const rightContent = document.querySelector("#right-content");
@@ -59,6 +60,14 @@ const display = (() => {
     }
   };
 
+  const displayProjectPage = (currProject) => {
+    rightContent.innerHTML = projectPage.displayContent(
+      currProject,
+      storage.taskStorage
+    );
+    projectPage.setListeners(currProject);
+  };
+
   // redisplays the current content
   const refreshContent = (project) => {
     switch (project) {
@@ -75,7 +84,7 @@ const display = (() => {
         break;
 
       default:
-        displayInbox();
+        displayProjectPage(project);
         break;
     }
   };
@@ -91,6 +100,7 @@ const display = (() => {
     const addProjectBtn = document.querySelector("#add-project-btn");
     const cancelProjectBtn = document.querySelector("#cancel-project-btn");
     const xProjectBtns = document.querySelectorAll(".x-project");
+    const projectNames = document.querySelectorAll(".project-name");
 
     inboxLi.addEventListener("click", () => {
       displayInbox();
@@ -126,6 +136,14 @@ const display = (() => {
         const projectIndex = e.target.getAttribute("data-index");
         storage.deleteProject(projectIndex);
         displayProjects();
+      });
+    });
+
+    projectNames.forEach((projectName) => {
+      projectName.addEventListener("click", (e) => {
+        const projectIndex = e.target.getAttribute("data-index");
+
+        displayProjectPage(storage.projectStorage[projectIndex]);
       });
     });
   };
