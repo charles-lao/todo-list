@@ -24,13 +24,21 @@ const inbox = (() => {
         const taskDetails = document.createElement("p");
         taskDetails.textContent = tasks[i].title;
 
+        const taskDetailsInput = document.createElement("input");
+        taskDetailsInput.setAttribute("value", tasks[i].title);
+        taskDetailsInput.type = "text";
+
         const taskDueDate = document.createElement("p");
         taskDueDate.textContent = tasks[i].dueDate;
 
+        const taskDueDateInput = document.createElement("input");
+        taskDueDateInput.type = "date";
+
         taskDiv.appendChild(btn);
         taskDiv.appendChild(taskDetails);
+        taskDiv.appendChild(taskDetailsInput);
         taskDiv.appendChild(taskDueDate);
-
+        taskDiv.appendChild(taskDueDateInput);
         inboxDiv.appendChild(taskDiv);
       }
     }
