@@ -185,6 +185,13 @@ li#this-week {
   margin-bottom: 10px;
 }
 
+.task-details-input,
+.task-due-date-input,
+.task-cancel-btn,
+.task-add-btn {
+  display: none;
+}
+
 input[type="text"] {
   border-radius: 10px;
   height: 1.5rem;

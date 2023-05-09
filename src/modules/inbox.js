@@ -26,19 +26,32 @@ const inbox = (() => {
 
         const taskDetailsInput = document.createElement("input");
         taskDetailsInput.setAttribute("value", tasks[i].title);
+        taskDetailsInput.setAttribute("class", "task-details-input");
         taskDetailsInput.type = "text";
 
         const taskDueDate = document.createElement("p");
         taskDueDate.textContent = tasks[i].dueDate;
 
         const taskDueDateInput = document.createElement("input");
+        taskDueDateInput.setAttribute("class", "task-due-date-input");
         taskDueDateInput.type = "date";
+
+        const taskCancelBtn = document.createElement("button");
+        taskCancelBtn.setAttribute("class", "task-cancel-btn");
+        taskCancelBtn.type = "button";
+        taskCancelBtn.textContent = "Cancel";
+
+        const taskConfirmBtn = document.createElement("button");
+        taskConfirmBtn.setAttribute("class", "task-add-btn");
+        taskConfirmBtn.textContent = "Confirm";
 
         taskDiv.appendChild(btn);
         taskDiv.appendChild(taskDetails);
         taskDiv.appendChild(taskDetailsInput);
         taskDiv.appendChild(taskDueDate);
         taskDiv.appendChild(taskDueDateInput);
+        taskDiv.appendChild(taskCancelBtn);
+        taskDiv.appendChild(taskConfirmBtn);
         inboxDiv.appendChild(taskDiv);
       }
     }
