@@ -4,7 +4,6 @@
 }
 
 * {
-  border: 1px solid red;
   font-family: "Roboto";
   margin: 0;
   padding: 0;
@@ -153,6 +152,8 @@ li#this-week {
 .task-div {
   display: flex;
   gap: 10px;
+  border: 1px solid grey;
+  padding: 2px;
 }
 
 .task-div > p:nth-child(2) {
