@@ -45,6 +45,16 @@ const storage = (() => {
     updateLocalStorage();
   };
 
+  const editTask = (taskIdNo, newTitle, project) => {
+    for (let i = 0; i < taskStorage.length; i++) {
+      if (taskStorage[i].idNo == taskIdNo) {
+        taskStorage[i].title = newTitle;
+        updateLocalStorage();
+        display.refreshContent(project);
+      }
+    }
+  };
+
   const addProject = (name) => {
     projectStorage.push(name);
     updateLocalStorage();
@@ -76,6 +86,7 @@ const storage = (() => {
     addTask,
     addProject,
     deleteProject,
+    editTask,
   };
 })();
 

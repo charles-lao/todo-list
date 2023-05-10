@@ -120,6 +120,12 @@ const inbox = (() => {
     taskDetails.forEach((taskDetail) => {
       taskDetail.addEventListener("click", (e) => {
         const dataID = e.target.getAttribute("data-id");
+
+        // reinitializes display for non selected taskDetail
+        taskDetails.forEach((taskDeet) => {
+          taskDeet.setAttribute("style", "display: flex;");
+        });
+
         taskDetail.setAttribute("style", "display: none;");
 
         taskDetailsInputs.forEach((taskDetailsInput) => {
@@ -128,9 +134,11 @@ const inbox = (() => {
 
             taskDetailsInput.addEventListener("keypress", (e) => {
               if (e.keyCode === 13) {
-                alert(`${taskDetailsInput.value}`);
+                storage.editTask(dataID, taskDetailsInput.value, "default");
               }
             });
+          } else {
+            taskDetailsInput.setAttribute("style", "display: none;");
           }
         });
       });
