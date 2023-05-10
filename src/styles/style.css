@@ -167,6 +167,8 @@ li#this-week {
   border-color: black;
   border-width: 2px;
   background-color: #def2ff;
+  align-self: center;
+  justify-self: center;
 }
 
 .circle-btn:hover {
@@ -186,10 +188,9 @@ li#this-week {
 }
 
 .task-details-input,
-.task-due-date-input,
-.task-cancel-btn,
-.task-add-btn {
+.task-due-date-input {
   display: none;
+  flex: 1;
 }
 
 input[type="text"] {

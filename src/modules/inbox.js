@@ -22,11 +22,14 @@ const inbox = (() => {
         btn.setAttribute("data-id", tasks[i].idNo);
 
         const taskDetails = document.createElement("p");
+        taskDetails.setAttribute("class", "task-details");
+        taskDetails.setAttribute("data-id", tasks[i].idNo);
         taskDetails.textContent = tasks[i].title;
 
         const taskDetailsInput = document.createElement("input");
         taskDetailsInput.setAttribute("value", tasks[i].title);
         taskDetailsInput.setAttribute("class", "task-details-input");
+        taskDetailsInput.setAttribute("data-id", tasks[i].idNo);
         taskDetailsInput.type = "text";
 
         const taskDueDate = document.createElement("p");
@@ -36,22 +39,11 @@ const inbox = (() => {
         taskDueDateInput.setAttribute("class", "task-due-date-input");
         taskDueDateInput.type = "date";
 
-        const taskCancelBtn = document.createElement("button");
-        taskCancelBtn.setAttribute("class", "task-cancel-btn");
-        taskCancelBtn.type = "button";
-        taskCancelBtn.textContent = "Cancel";
-
-        const taskConfirmBtn = document.createElement("button");
-        taskConfirmBtn.setAttribute("class", "task-add-btn");
-        taskConfirmBtn.textContent = "Confirm";
-
         taskDiv.appendChild(btn);
         taskDiv.appendChild(taskDetails);
         taskDiv.appendChild(taskDetailsInput);
         taskDiv.appendChild(taskDueDate);
         taskDiv.appendChild(taskDueDateInput);
-        taskDiv.appendChild(taskCancelBtn);
-        taskDiv.appendChild(taskConfirmBtn);
         inboxDiv.appendChild(taskDiv);
       }
     }
@@ -96,6 +88,8 @@ const inbox = (() => {
     const cancelTaskBtn = document.querySelector("#cancel-task-btn");
     const addTaskBtn = document.querySelector("#add-task-btn");
     const addTaskInput = document.querySelector("#add-task-input");
+    const taskDetails = document.querySelectorAll(".task-details");
+    const taskDetailsInputs = document.querySelectorAll(".task-details-input");
 
     buttons.forEach((button) => {
       button.addEventListener("click", (e) => {
@@ -120,6 +114,26 @@ const inbox = (() => {
     addTaskBtn.addEventListener("click", (e) => {
       storage.addTask(addTaskInput.value, "default");
       display.refreshContent("default");
+    });
+
+    // toggle the display for the task details input
+    taskDetails.forEach((taskDetail) => {
+      taskDetail.addEventListener("click", (e) => {
+        const dataID = e.target.getAttribute("data-id");
+        taskDetail.setAttribute("style", "display: none;");
+
+        taskDetailsInputs.forEach((taskDetailsInput) => {
+          if (taskDetailsInput.getAttribute("data-id") == dataID) {
+            taskDetailsInput.setAttribute("style", "display: flex;");
+
+            taskDetailsInput.addEventListener("keypress", (e) => {
+              if (e.keyCode === 13) {
+                alert(`${taskDetailsInput.value}`);
+              }
+            });
+          }
+        });
+      });
     });
   };
 
